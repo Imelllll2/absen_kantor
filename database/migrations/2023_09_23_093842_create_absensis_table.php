@@ -16,10 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('karyawan_id');
             $table->date('tanggal');
-            $table->time('jam_masuk');
-            $table->time('jam_keluar');
-            $table->string('keterangan', 100);
-            $table->foreign('karyawan_id')->references('id')->on('karyawans');
+            $table->foreign('karyawan_id')->references('id')->on('karyawans')->onDelete('cascade');
         });
     }
 

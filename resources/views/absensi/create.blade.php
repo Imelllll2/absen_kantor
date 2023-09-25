@@ -7,19 +7,19 @@
             <div class="bg-green-500 text-white p-4 rounded-md mb-6">
                 {{session('success')}}
             </div>
-            @endif
+        @endif
     <form action="{{route('absensi.store')}}" method="POST">
         @csrf
         @method('post')
         <div class="space-y-12">
         
           <div class="border-b border-gray-900/10 pb-12">
-            <h2 class="text-base font-semibold leading-7 text-gray-900">Lakukan Absen</h2>
+            <h2 class="text-base font-semibold leading-7 text-gray-900 dark:text-white">Lakukan Absen</h2>
             
       
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div class="sm:col-span-6">
-                <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Nama Karyawan</label>
+                <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900 dark:text-white">Nama Karyawan</label>
                 <div class="mt-2">
                   <select type="text" name="karyawan_id" id="karyawan_id" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     @foreach ($data as $item)

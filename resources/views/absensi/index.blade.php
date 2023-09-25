@@ -20,6 +20,8 @@
 
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Nama</th>
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Alamat</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">tanggal</th>
+
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">detail</th>
                 </tr>
             </thead>
@@ -27,10 +29,12 @@
                 @foreach ($data as $item)
                     
                 <tr>
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{{$item->karyawan->nama}}</td>
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{{$item->created_at}}</td>
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white">{{$item->karyawan->nama}}</td>
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white">{{$item->karyawan->alamat}}</td>
 
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white">{{$item->created_at}}</td>
+
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white">
                         <div class="flex gap-4">
 
 

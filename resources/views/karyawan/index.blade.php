@@ -17,20 +17,20 @@
         <table class="min-w-full my-5">
             <thead>
                 <tr>
-                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">No.</th>
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Nama</th>
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Alamat</th>
                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Telepon</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Detail</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($data as $item)
                     
                 <tr>
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{{$item->nama}}</td>
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{{$item->alamat}}</td>
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{{$item->telepon}}</td>
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white" >{{$item->nama}}</td>
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white">{{$item->alamat}}</td>
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white">{{$item->telepon}}</td>
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 dark:text-white">
                         <div class="flex gap-4">
 
                             <a href="{{route('karyawan.show',["id"=>$item->id])}}" class="py-1.5 px-3 bg-blue-500 rounded-md text-white hover:bg-blue-400">detail</a>
